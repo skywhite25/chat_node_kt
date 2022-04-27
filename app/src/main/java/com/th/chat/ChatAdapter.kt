@@ -1,4 +1,4 @@
-package com.example.nodejs_chatting_example
+package com.th.chat
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.th.chat.R
 import com.th.chat.model.ChatModel
 import java.net.URL
 import java.util.ArrayList

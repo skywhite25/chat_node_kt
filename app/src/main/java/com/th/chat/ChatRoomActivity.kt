@@ -10,7 +10,6 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.nodejs_chatting_example.ChatAdapter
 import com.github.nkzawa.emitter.Emitter
 import com.github.nkzawa.socketio.client.IO
 import com.github.nkzawa.socketio.client.Socket
@@ -34,7 +33,7 @@ class ChatRoomActivity: AppCompatActivity() {
     private var time = 2
 
     //private var mSocket: Socket = IO.socket("[your server url]")
-    private var mSocket: Socket = IO.socket("http://b8d76a8d.ngrok.io/")
+    private var mSocket: Socket = IO.socket("https://d418-58-230-235-51.jp.ngrok.io//")
 
     //리사이클러뷰
     var arrayList = arrayListOf<ChatModel>()
@@ -169,7 +168,8 @@ class ChatRoomActivity: AppCompatActivity() {
         } catch (e: JSONException) {
             e.printStackTrace()
         }
-        Log.e("챗룸", "sendMessage: 1" + mSocket.emit("chat message", jsonObject))
+        Log.e("챗룸", "sendMessage: 1 " + mSocket.emit("chat message", jsonObject))
+        Log.e("sendmmm","sendMessage: 2 " + preferences.getString("name", "") )
 
     }
 
